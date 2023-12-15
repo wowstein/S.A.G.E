@@ -1,0 +1,304 @@
+version: "3.1"
+
+stories:
+
+- story: happy path 1
+  steps:
+  - intent: mood_great
+  - action: utter_happy
+  - action: utter_sleep_question
+  - intent: affirm
+  - action: utter_add_event
+  - action: action_add_event
+
+
+- story: happy path 2
+  steps:
+  - intent: mood_great
+  - action: utter_happy
+  - action: utter_sleep_question
+  - intent: deny
+  - action: utter_sleep_alarm_no
+  - action: utter_goodbye
+
+- story: breathing by guide 1
+  steps:
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - intent: breathing_exercise
+  - action: utter_play_or_guided_breath
+  - intent: guide
+  - action: utter_trigger_breathing_exercise
+  - action: utter_to_start_breath
+  - action: utter_breath1
+  - intent: done
+  - action: utter_breath2
+  - intent: done
+  - action: utter_breath3
+  - intent: done
+  - action: utter_breath4
+  - intent: done
+  - action: utter_breath5
+  - intent: done
+  - action: utter_great_repeat_as_needed
+  - intent: affirm
+  - action: utter_are_you_feeling_better
+  - intent: affirm
+  - action: utter_happy
+
+- story: breathing by guide 2
+  steps:
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - intent: breathing_exercise
+  - action: utter_play_or_guided_breath
+  - intent: guide
+  - action: utter_trigger_breathing_exercise
+  - action: utter_to_start_breath
+  - action: utter_breath1
+  - intent: done
+  - action: utter_breath2
+  - intent: done
+  - action: utter_breath3
+  - intent: done
+  - action: utter_breath4
+  - intent: done
+  - action: utter_breath5
+  - intent: done
+  - action: utter_great_repeat_as_needed
+  - intent: affirm
+  - action: utter_are_you_feeling_better
+  - intent: deny
+  - action: utter_question
+  - intent: suicidal_path
+  - action: utter_suicidal_help
+
+- story: breathing by guide 3
+  steps:
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - intent: breathing_exercise
+  - action: utter_play_or_guided_breath
+  - intent: guide
+  - action: utter_trigger_breathing_exercise
+  - action: utter_to_start_breath
+  - action: utter_breath1
+  - intent: done
+  - action: utter_breath2
+  - intent: done
+  - action: utter_breath3
+  - intent: done
+  - action: utter_breath4
+  - intent: done
+  - action: utter_breath5
+  - intent: done
+  - action: utter_great_repeat_as_needed
+  - intent: affirm
+  - action: utter_are_you_feeling_better
+  - intent: deny
+  - action: utter_question
+  - intent: shut_down
+  - action: utter_shut_down
+
+- story: breathing by video 1
+  steps:
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - intent: breathing_exercise
+  - action: utter_play_or_guided_breath
+  - intent: watch_breathing_exercise
+  - action: action_breathing_video
+  - action: utter_are_you_done
+  - intent: affirm
+  - action: utter_great_repeat_as_needed
+  - intent: affirm
+  - action: utter_are_you_feeling_better
+  - intent: affirm
+  - action: utter_happy
+
+- story: breathing by video 2
+  steps:
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - intent: breathing_exercise
+  - action: utter_play_or_guided_breath
+  - intent: watch_breathing_exercise
+  - action: action_breathing_video
+  - action: utter_are_you_done
+  - intent: affirm
+  - action: utter_great_repeat_as_needed
+  - intent: affirm
+  - action: utter_are_you_feeling_better
+  - intent: deny
+  - action: utter_question
+  - intent: suicidal_path
+  - action: utter_suicidal_help
+
+- story: breathing by video 3
+  steps:
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - intent: breathing_exercise
+  - action: utter_play_or_guided_breath
+  - intent: watch_breathing_exercise
+  - action: action_breathing_video
+  - action: utter_are_you_done
+  - intent: affirm
+  - action: utter_great_repeat_as_needed
+  - intent: affirm
+  - action: utter_are_you_feeling_better
+  - intent: deny
+  - action: utter_question
+  - intent: shut_down
+  - action: utter_shut_down
+
+- story: grounding by guide 1
+  steps:
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - intent: grounding_exercise
+  - action: utter_play_or_guided_ground
+  - intent: guide
+  - action: utter_trigger_grounding_exercise
+  - action: utter_to_start_grounding
+  - action: utter_look_around_you
+  - action: utter_ground1
+  - intent: done
+  - action: utter_ground2
+  - intent: done
+  - action: utter_ground3
+  - intent: done
+  - action: utter_ground4
+  - intent: done
+  - action: utter_ground5
+  - intent: done
+  - action: utter_are_you_feeling_better
+  - intent: affirm
+  - action: utter_happy
+
+- story: grounding by guide 2
+  steps:
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - intent: grounding_exercise
+  - action: utter_play_or_guided_ground
+  - intent: guide
+  - action: utter_trigger_grounding_exercise
+  - action: utter_to_start_grounding
+  - action: utter_look_around_you
+  - action: utter_ground1
+  - intent: done
+  - action: utter_ground2
+  - intent: done
+  - action: utter_ground3
+  - intent: done
+  - action: utter_ground4
+  - intent: done
+  - action: utter_ground5
+  - intent: done
+  - action: utter_are_you_feeling_better
+  - intent: deny
+  - action: utter_question
+  - intent: suicidal_path
+  - action: utter_suicidal_help
+
+- story: grounding by guide 3
+  steps:
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - intent: grounding_exercise
+  - action: utter_play_or_guided_ground
+  - intent: guide
+  - action: utter_trigger_grounding_exercise
+  - action: utter_to_start_grounding
+  - action: utter_look_around_you
+  - action: utter_ground1
+  - intent: done
+  - action: utter_ground2
+  - intent: done
+  - action: utter_ground3
+  - intent: done
+  - action: utter_ground4
+  - intent: done
+  - action: utter_ground5
+  - intent: done
+  - action: utter_are_you_feeling_better
+  - intent: deny
+  - action: utter_question
+  - intent: shut_down
+  - action: utter_shut_down
+
+- story: grounding by video 1
+  steps:
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - intent: grounding_exercise
+  - action: utter_play_or_guided_ground
+  - intent: watch_grounding_exercise
+  - action: action_grounding_video
+  - action: utter_are_you_feeling_better
+  - intent: affirm
+  - action: utter_happy
+
+- story: grounding by video 2
+  steps:
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - intent: grounding_exercise
+  - action: utter_play_or_guided_ground
+  - intent: watch_grounding_exercise
+  - action: action_grounding_video
+  - action: utter_are_you_feeling_better
+  - intent: deny
+  - action: utter_question
+  - intent: suicidal_path
+  - action: utter_suicidal_help
+
+- story: grounding by video 3
+  steps:
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - intent: grounding_exercise
+  - action: utter_play_or_guided_ground
+  - intent: watch_grounding_exercise
+  - action: action_grounding_video
+  - action: utter_are_you_feeling_better
+  - intent: deny
+  - action: utter_question
+  - intent: shut_down
+  - action: utter_shut_down
+
+
+- story: spotify 1
+  steps:
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - intent: request_spotify
+  - action: action_play_spotify_anxiety
+  - action: utter_are_you_feeling_better
+  - intent: affirm
+  - action: utter_goodbye
+
+- story: spotify 2
+  steps:
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - intent: request_spotify
+  - action: action_play_spotify_anxiety
+  - action: utter_are_you_feeling_better
+  - intent: deny
+  - action: utter_question
+  - intent: suicidal_path
+  - action: utter_suicidal_help
+
+- story: spotify 3
+  steps:
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - intent: request_spotify
+  - action: action_play_spotify_anxiety
+  - action: utter_are_you_feeling_better
+  - intent: deny
+  - action: utter_question
+  - intent: shut_down
+  - action: utter_shut_down
