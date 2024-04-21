@@ -16,7 +16,7 @@ S.A.G.E was created as part of the 1 month team project(Part of the Machine Lear
 
 - <b>Pycharm community edition</b> 
 
-<h2>Program walk-through:</h2>
+<h2>Program glimpses:</h2>
 
 <p align="center">
 Personalisation: <br/>
